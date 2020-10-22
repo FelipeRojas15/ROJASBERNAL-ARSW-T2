@@ -1,4 +1,10 @@
 package eci.edu.co.arsw.parcialWeather.model;
+
+/**
+ * Esta clase guarda el tipo y a que pais pertenece la ciudad seleccionada 
+ * @author rojas
+ *
+ */
 public class Sys {
 	public int type;
 	public int id;

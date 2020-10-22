@@ -1,7 +1,11 @@
 package eci.edu.co.arsw.parcialWeather.model;
 
 
-
+/**
+ * Esta clase almacena la latitud y la longitud en donde se encuentra la ciudad seleccionada
+ * @author rojas
+ *
+ */
 public class Coord {
 	public double lon;
 	public double lat;

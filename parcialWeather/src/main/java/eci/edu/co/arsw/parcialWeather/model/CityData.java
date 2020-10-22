@@ -1,5 +1,10 @@
 package eci.edu.co.arsw.parcialWeather.model;
 
+/**
+ * Esta clase nos permite guardar todos los datos que genero la API sobre la ciudad seleccionada 
+ * @author rojas
+ *
+ */
 public class CityData {
 	public Coord coord;
 	public Weather[] weather;

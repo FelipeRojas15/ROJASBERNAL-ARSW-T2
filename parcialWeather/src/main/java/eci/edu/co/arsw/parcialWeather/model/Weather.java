@@ -1,5 +1,11 @@
 package eci.edu.co.arsw.parcialWeather.model;
 
+
+/**
+ * Esta clase guarda la descripcion y los datos generales de la ciudad
+ * @author rojas
+ *
+ */
 public class Weather {
 	public int id;
 	public String main;

@@ -1,5 +1,10 @@
 package eci.edu.co.arsw.parcialWeather.model;
 
+/**
+ * Esta clase guar la densidad y la velocidad del viento que hay en la ciudad
+ * @author rojas
+ *
+ */
 public class Wind {
 	public float speed;
 	public float deg;

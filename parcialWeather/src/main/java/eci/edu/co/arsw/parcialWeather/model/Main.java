@@ -1,5 +1,10 @@
 package eci.edu.co.arsw.parcialWeather.model;
 
+/**
+ * Esta clase almacena los datos mas especificos como temperatura, humedad y datos asi.
+ * @author rojas
+ *
+ */
 public class Main {
 	public float temp;
 	public float feels_like;
