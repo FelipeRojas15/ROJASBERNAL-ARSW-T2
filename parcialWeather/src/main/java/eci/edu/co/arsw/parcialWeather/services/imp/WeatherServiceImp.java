@@ -37,29 +37,6 @@ public class WeatherServiceImp implements WeatherService{
 		
 		return city;		
 	}
-	/**public CityData mapDataWeather(JSONObject data) throws IOException  {
-		System.out.println(data);
-		ObjectMapper mapper = new ObjectMapper();
-		System.out.println("hola");
-		Coord coord = mapper.readValue(data.getJSONObject("coord").toString(), Coord.class);
-		System.out.println("hola2222");
-		//Weather[] weather = mapper.readValue(data.getJSONArray("weather").getJSONObject(0).toString(), Weather.class);
-		String base = data.getString("base");
-		Main main = mapper.readValue(data.getJSONObject("main").toString(), Main.class);
-		int visibility = data.getInt("visibility");
-		Wind wind = mapper.readValue(data.getJSONObject("wind").toString(), Wind.class);
-		Cloud cloud = mapper.readValue(data.getJSONObject("clouds").toString(), Cloud.class);
-		int dt = data.getInt("dt");
-		Sys sys = mapper.readValue(data.getJSONObject("sys").toString(), Sys.class);
-		int timezone = data.getInt("timezone");
-		int id = data.getInt("id");
-		String name = data.getString("name");
-		int cod = data.getInt("cod");
-		
-		
-		
-		//return new //CityData(coord,weather,base,main,visibility,wind,cloud,dt,sys,timezone,id,name,cod);
-	}	
-		*/
+	
 	
 }

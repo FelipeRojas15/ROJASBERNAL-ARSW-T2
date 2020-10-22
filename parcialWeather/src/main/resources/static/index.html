@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="js/apiclient.js"></script>
+    <script src="js/app.js"></script>
+  
+    <title>Open Weather </title>
+   
+</head>
+<body onload = "app.init()">
+    <div style="font-family: 'Fjalla One', sans-serif;">
+        <div style = "width: 100%; background: rgb(10, 10, 10); text-align: center;" >
+            <h1><MARQUEE  style = "color: white;" scrollamount = 10 behavior=alternate> Open Weather </MARQUEE ></h1>
+        </div>
+        <br>
+        <br>
+        <div>
+            <form class="form-inline">
+                <h2><label for="Weather" id="weather">Weather of the City</label></h2>
+				<br>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="city" placeholder="city">
+                </div>                
+                <button type="button" class="btn btn-dark" id="boton" onclick="app.getStatsByCity();">Get Weather</button>
+            </form>
+            <br>
+            <br>            
+            <br>
+            <div>
+				<h3 style="text-align: center;" > General </h3>
+                <table class="table" id="tabla" style="width: 100%;">
+                    <thead class="thead-dark">
+                        <tr>
+						    <th>City</th>						  
+						    <th>Base</th>						  
+						    <th>Visibility</th>						 
+						    <th>Dt</th>						  
+						    <th>Timezone</th>
+						 </tr>
+                    </thead>
+                    <tbody id = "cuerpo">
+                        
+                    </tbody>
+                </table>
+            </div>
+			<br>
+			<br>
+			<br>
+			<div>
+				<h3 style="text-align: center;"> Main </h3>
+                <table class="table" id="tabla2" style="width: 100%;">
+                    <thead class="thead-dark">
+                        <tr>
+						    <th>Temp</th>						  
+						    <th>Feels_Like</th>						  
+						    <th>Temp_min</th>						 
+						    <th>Temp_max</th>						  
+						    <th>Pressure</th>
+							<th>Humidity</th>
+						 </tr>
+                    </thead>
+                    <tbody id = "cuerpo2">
+                        
+                    </tbody>
+                </table>
+            </div>
+			<br>
+			<br>
+			<br>
+			<div>
+				<h3 style="text-align: center;"> Sys </h3>
+                <table class="table" id="tabla3" style="width: 100%;">
+                    <thead class="thead-dark">
+                        <tr>
+						    <th>Type</th>						  
+						    <th>Id</th>						  
+						    <th>Country</th>						 
+						    <th>Sunrise</th>						  
+						    <th>Sunset</th>							
+						 </tr>
+                    </thead>
+                    <tbody id = "cuerpo3">
+                        
+                    </tbody>
+                </table>
+            </div>
+			<br>
+			<br>
+			<br>
+			<div>
+				<h3 style="text-align: center;"> Weather </h3>
+                <table class="table" id="tabla4" style="width: 100%;">
+                    <thead class="thead-dark">
+                        <tr>							  
+						    <th>Id</th>						  
+						    <th>Main</th>						 
+						    <th>Description</th>						  
+						    <th>Icon</th>							
+						 </tr>
+                    </thead>
+                    <tbody id = "cuerpo4">                        
+                    </tbody>
+                </table>
+            </div>
+		<br>
+			<br>
+			<br>
+			<div>
+				<h3 style="text-align: center;"> Wind and Clouds </h3>
+                <table class="table" id="tabla5" style="width: 100%;">
+                    <thead class="thead-dark">
+                        <tr>						  
+						    <th>Speed</th>
+						    <th>Deg</th>
+							<th>all</th>					    
+						 </tr>
+                    </thead>
+                    <tbody id = "cuerpo5">
+                        
+                    </tbody>
+                </table>
+            </div>
+		<br>
+			<br>
+			<br>
+			<div>
+				<h3 style="text-align: center;"> Coord </h3>
+                <table class="table" id="tabla6" style="width: 100%;">
+                    <thead class="thead-dark">
+                        <tr>					  
+						    <th>Lon</th>				  
+						    <th>Lat</th>						    
+						 </tr>
+                    </thead>
+                    <tbody id = "cuerpo6">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+	
+  	
+</body>
+
+</html>
