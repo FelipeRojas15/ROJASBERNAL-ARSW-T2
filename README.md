@@ -25,6 +25,11 @@ $ mvn package
 ```sh
 $ mvn spring-boot:run
 ```
+## Despliegue:
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://rojasbrayan-arsw-t2.herokuapp.com/)
+
+## Documentación:
+Si desea ver la documentación [Aqui](https://github.com/FelipeRojas15/ROJASBERNAL-ARSW-T2/tree/master/doc)
 
 
 ## Preparación para el Parcial
