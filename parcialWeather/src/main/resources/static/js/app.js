@@ -1,6 +1,6 @@
 var app = (function () {
   	
-
+	var map;
 	var nameCity = "";
     getStatsByCity = function(){
 	  nameCity = $("#city").val();
@@ -71,13 +71,41 @@ var app = (function () {
             <td>${listados.coord.lat}</td>		              
         </tr>`
       );
-    
+    plotMarkers(listados.coord)
 
     }
+	var initMap = () => {
+        map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 7,
+            center: {lat:51.16, lng:10.45},
+        });
+    }
 
+    function plotMarkers(m) {
+        console.log(m)
+        markers = [];
+        bounds = new google.maps.LatLngBounds();
+        console.log(m.latitude, m.longitude);
+        var position = new google.maps.LatLng(m.lat, m.lon);
+        console.log(position);
+        markers.push(
+            new google.maps.Marker({
+                position: position,
+                map: map,
+                animation: google.maps.Animation.DROP
+            })
+        );
+        bounds.extend(position);
+        map.fitBounds(bounds);
+        map.setZoom(4);
+    }
+
+    function init() {
+        initMap();
+    }
     
   return {
-	
+	init: init,
     getStatsByCity:getStatsByCity
 	
   }

@@ -12,6 +12,7 @@ import eci.edu.co.arsw.parcialWeather.httpService.HttpServiceConnect;
 
 @Service
 public class HttpServiceConnectImp implements HttpServiceConnect   {
+	
 	@Override
 	public JSONObject getWeatherByCityName(String nameCity)  {
 		

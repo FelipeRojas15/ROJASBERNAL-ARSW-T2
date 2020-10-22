@@ -18,7 +18,11 @@
     <script src="js/app.js"></script>
   
     <title>Open Weather </title>
-   
+    <style>
+        #map {
+            height: 500px;
+        }
+        </style>
 </head>
 <body onload = "app.init()">
     <div style="font-family: 'Fjalla One', sans-serif;">
@@ -40,7 +44,7 @@
             <br>            
             <br>
             <div>
-				<h3 style="text-align: center;" > General </h3>
+				<h3 style="text-align: center;"> General </h3>
                 <table class="table" id="tabla" style="width: 100%;">
                     <thead class="thead-dark">
                         <tr>
@@ -151,10 +155,13 @@
                 </table>
             </div>
         </div>
-        
+        <div id = "map">
+            
+        </div>
     </div>
 	
-  	
+  	<script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&language=en"
+               type="text/javascript"></script>
 </body>
 
 </html>

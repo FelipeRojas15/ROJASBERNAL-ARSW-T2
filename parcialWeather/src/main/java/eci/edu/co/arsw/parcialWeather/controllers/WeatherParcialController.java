@@ -24,6 +24,12 @@ public class WeatherParcialController {
 	@Qualifier("weatherService")
 	private WeatherServiceImp weather; 
 	
+	/**
+	 * Petecion get que retorna el clima y las estadisticas de la ciudad seleccionada 
+	 * @param nameCity nombre de la ciudad 
+	 * @return retorna json con datos sobre el clima para la ciudad 
+	 * @throws IOException
+	 */
 	@RequestMapping(value = "/{nameCity}",method = RequestMethod.GET)
 	public ResponseEntity<?> getAirportByName(@PathVariable(name="nameCity") String nameCity) throws IOException  {
 		try {
