@@ -1,5 +1,32 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
+## Parcial Open Weather 
+> En este parcial se realiza el consumo de una API acerca del clima en los paises, generando estadisticas y organizandolas de 
+manera visual para el usuario final. A su vez se presenta la ubicacion del pais seleccionado en un mapa de Google maps 
+
+
+## Requerimientos 
+Se necesita que tenga instalado en su computadora:
+```sh
+$ Java 1.8
+$ Maven 3.6.3
+```
+con su respectiva configuracion
+## Instalación
+> **Clonar el repositorio:** 
+```sh
+$ https://github.com/FelipeRojas15/ROJASBERNAL-ARSW-T2
+```
+> **Compilar el proyecto:**
+```sh
+$ mvn package
+```
+> **Ejecutar el programa:** 
+```sh
+$ mvn spring-boot:run
+```
+
+
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
@@ -8,6 +35,7 @@ Con el objetivo de preparar el examen final del segundo tercio, por favor siga l
 2. Use la colección de Postman adjunta para validar el funcionamiento del endpoint por fuera de la página de OpenWeather.
 3. Si no ha terminado por completo el último laboratorio, hagalo, si es necesario desde el inicio y completo. En ese laboratorio esta basado el parcial.
 4. Revise la documentación de Google Maps para agregar marcadores a un mapa o revise este [Codepen](https://codepen.io/SitePoint/pen/YWKLzv?editors=0110)
+
 
 ## Descripción del Problema a Solucionar
 
